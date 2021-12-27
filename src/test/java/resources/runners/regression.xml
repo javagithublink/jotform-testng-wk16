@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test suite">
+
+    <!--<groups>
+        <run>
+            <include name="regression"></include>
+        </run>
+    </groups>-->
+
+    <listeners>
+        <listener class-name="com.jotform.form.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <parameter name="fname" value="Jim"></parameter>
+    <parameter name="lname" value="Morris"></parameter>
+    <parameter name="dayText" value="12-16-2021"></parameter>
+    <parameter name="securityQuestion" value=" Favourite school name "></parameter>
+    <parameter name="securityAnswer" value="SSB"></parameter>
+
+    <test name="regression test">
+
+        <classes>
+            <class name="com.jotform.form.testsuite.JotFormTest"></class>
+        </classes>
+
+    </test>
+</suite>
